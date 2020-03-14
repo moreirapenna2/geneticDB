@@ -1,5 +1,6 @@
 body{
-    padding-top:90px
+    padding-top:90px;
+    background-color: #f8f9fc
 }
 @media (min-width:768px){
     body{padding-top:0
@@ -78,4 +79,39 @@ body{
 
 .navbar-brand{
     padding-left: 0.5rem;
+}
+
+.title{
+    color: #5a5c69 !important;
+}
+
+.greetingUser{
+    display: block;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0;
+}
+
+.userNav{
+    padding-bottom: 0;
+}
+.notificationBell{
+    margin-top: .25rem;
+}
+
+.notificationCounter{
+    transform: scale(.7);
+    right: .25rem;
+    margin-top: .25rem;
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .35rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    color: #fff;
+    background-color: #343a40;
 }

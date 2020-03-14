@@ -42,28 +42,50 @@
         <div class="collapse navbar-collapse" id="navbarNav" style="height: 100%">
             <ul class="navbar-nav">
                 <li class="nav-item active" style="padding-top: 3%">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/__pag/dashboard.php"><i class="fas fa-home"></i> Home<span class="sr-only">(current)</span></a>
                 </li>
                 <hr class="sidebar-divider">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Database</a>
+                    <a class="nav-link" href="#"><i class="fas fa-database"></i> Database</a>
                 </li>
                 <hr class="sidebar-divider">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Profile</a>
+                    <a class="nav-link" href="#"><i class="fas fa-user"></i> Profile</a>
                 </li>
                 <hr class="sidebar-divider">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Configurations</a>
+                    <a class="nav-link" href="#"><i class="fas fa-cog"></i> Configurations</a>
                 </li>
                 <hr class="sidebar-divider">
                 <li class="nav-item justify-content-end nav-item-end">
-                    <a class="nav-link" href="/../__inc/structure/logout.php">Sign out</a>
+                    <a class="nav-link" href="/../__inc/structure/logout.php"><i class="fas fa-door-open"></i> Sign out</a>
                 </li>
             </ul>
-        </div>
-    </nav>
+        </div><!-- collapse -->
+    </nav><!-- navbar -->
+    
+    <div class="d-flex flex-column">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light ml-auto userNav">
+            <div class="collapse navbar-collapse" id="navbarNav" style="height: 100%">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link">
+                            <i class="fas fa-bell notificationBell" style="vertical-align: -webkit-baseline-middle;"></i>
+                            <span class="notificationCounter">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <p class="greetingUser"><?php echo 'Welcome, ';echo $_SESSION['login_user'] ?></p>
+                    </li>
+                </ul>
+            </div><!-- collapse -->
+        </nav><!-- navbar -->
 
 
+        <div class="container-fluid">
+            <h1 class="title">Dashboard</h1>
+        </div><!-- container -->
+    </div>
 </body>
 </html>

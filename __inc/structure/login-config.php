@@ -22,7 +22,7 @@
          if($count == 1) {
             $_SESSION['login_user'] = $myusername;
             
-            header("location: __pag/welcome.php", true);
+            header("location: __pag/dashboard.php", true);
          }else {
             $error = "Your Login Name or Password is invalid";
          }
