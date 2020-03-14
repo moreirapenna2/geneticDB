@@ -56,16 +56,17 @@ body{
     }
 }
 
-.nav-item-end{
-    bottom: 5%;
-    position: absolute;
-    padding-left: 16px;
-}
+@media (min-width:768px){
+    .nav-item-end{
+        bottom: 5%;
+        position: absolute;
+        padding-left: 16px;
+    }
 
-.nav-item-end li a{
-    font-size: 20px;
+    .nav-item-end li a{
+        font-size: 20px;
+    }
 }
-
 .navbar-dark .navbar-nav .nav-link {
     color: #ABABAB;
 }
