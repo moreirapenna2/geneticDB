@@ -1,7 +1,9 @@
 <?php
+include_once("C:\\xampp\\htdocs\\__inc\\config.php");
    session_start();
    
    if(session_destroy()) {
-      header("Location: /../../__pag/login.php");
+      $sLocation = "location: ".URL;
+      header($sLocation, true);
    }
 ?>

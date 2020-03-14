@@ -13,4 +13,5 @@
     $db = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 
     define('DIR', 'C:\xampp\htdocs');
+    define('URL', 'http://localhost/');
 ?>
