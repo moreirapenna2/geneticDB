@@ -1,49 +1,58 @@
 <?php
-    include_once(DIR."/__inc/structure/login-config.php");
+      include_once("C:\\xampp\\htdocs\\__inc\\config.php");
+      include_once(DIR."/__inc/structure/login-config.php");
 ?>
 
+<!DOCTYPE html>
 <html>
-   <head>
-      <title>Login Page</title>
-      
-      <style type = "text/css">
-         body {
-            font-family:Arial, Helvetica, sans-serif;
-            font-size:14px;
-         }
-         label {
-            font-weight:bold;
-            width:100px;
-            font-size:14px;
-         }
-         .box {
-            border:#666666 solid 1px;
-         }
-      </style>
-      
-   </head>
+<head>
+	<title>Login Page</title>
    
-   <body bgcolor = "#FFFFFF">
-	
-      <div align = "center">
-         <div style = "width:300px; border: solid 1px #333333; " align = "left">
-            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Login</b></div>
-				
-            <div style = "margin:30px">
-               
-               <form action = "" method = "post">
-                  <label>UserName  :</label><input type="text" name="username" class="box" value="<?php echo isset($_POST['username']) ? $_POST['username'] : '' ?>"/><br /><br />
-                  <label>Password  :</label><input type="password" name="password" class="box" /><br/><br />
-                  <input type = "submit" value = " Submit "/><br />
-               </form>
-               
-               <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
-					
-            </div>
-				
-         </div>
-			
-      </div>
+	<!--Bootsrap 4 CDN-->
+	<link rel="stylesheet" href="/../css/bootstrap/bootstrap.min.css">
 
-   </body>
+   <!-- jquery -->
+   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+   <!--Fontawesome CDN-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+	<!--Custom styles-->
+	<link rel="stylesheet" type="text/css" href="/../css/login.css">
+</head>
+<body>
+<div class="container">
+	<div class="d-flex justify-content-center h-100">
+		<div class="card" style="height: 18rem;">
+			<div class="card-header">
+				<h3>Sign In</h3>
+			</div>
+			<div class="card-body" >
+				<form action="" method="post">
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+						<input type="text" class="form-control" name="username" placeholder="username">
+						
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+						<input type="password" class="form-control" name="password" placeholder="password" value="<?php echo isset($_POST['username']) ? $_POST['username'] : '' ?>">
+					</div>
+					<div class="row align-items-center remember">
+						<input type="checkbox" name="rememberme">Remember Me
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Login" class="btn float-right login_btn">
+					</div>
+				</form>
+            <div style = "font-size:12px; color:#f75a4f; margin-top:10px"><?php  echo $error; ?></div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
 </html>
