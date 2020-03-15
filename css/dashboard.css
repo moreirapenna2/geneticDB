@@ -1,6 +1,6 @@
 body{
     padding-top:90px;
-    background-color: #f8f9fc
+    background-color: #52585e
 }
 @media (min-width:768px){
     body{padding-top:0
@@ -93,6 +93,7 @@ body{
 
 .userNav{
     padding-bottom: 0;
+    /*width: 100%;*/
 }
 .notificationBell{
     margin-top: .25rem;

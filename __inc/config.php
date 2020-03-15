@@ -14,4 +14,5 @@
 
     define('DIR', 'C:\xampp\htdocs');
     define('URL', 'http://localhost/');
+    include_once('global_functions.php');
 ?>

@@ -1,6 +1,15 @@
 <?php
-   include_once("C:\\xampp\\htdocs\\__inc\\config.php");
-   include_once(DIR.'/__inc/structure/session.php'); 
+    include_once("C:\\xampp\\htdocs\\__inc\\config.php");
+    include_once(DIR.'/__inc/structure/session.php');
+
+    $sQueryRegister = "SELECT * FROM gene ORDER BY id DESC";
+    $oResults = searchDB($sQueryRegister);
+
+    $iRegQuant=0;
+    if($oResults){
+        $iRegQuant = count($oResults);
+        $oLastReg = $oResults[0];
+    }
 ?>
 
 <!DOCTYPE html>
@@ -84,7 +93,23 @@
 
 
         <div class="container-fluid">
-            <h1 class="title">Dashboard</h1>
+            <div class="row">
+                <h1 class="title">Dashboard</h1>
+            </div><!-- row -->
+
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="card h-100 py-2">
+                        <div class="card-body">
+                            <p>Number of registers: <?php echo $iRegQuant?></p>
+                            <p>Last register:</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;Name: <?php echo '          '.$oLastReg['name']?></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;Identification: <?php echo $oLastReg['geneId']?></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;Date: <?php echo '          '.$oLastReg['date']?></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div><!-- container -->
     </div>
 </body>
