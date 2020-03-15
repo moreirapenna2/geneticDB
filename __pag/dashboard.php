@@ -75,20 +75,18 @@
     
     <div class="d-flex flex-column">
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light ml-auto userNav">
-            <div class="collapse navbar-collapse" id="navbarNav" style="height: 100%">
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link">
-                            <i class="fas fa-bell notificationBell" style="vertical-align: -webkit-baseline-middle;"></i>
-                            <span class="notificationCounter">0</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <p class="greetingUser"><?php echo 'Welcome, ';echo $_SESSION['login_user'] ?></p>
-                    </li>
-                </ul>
-            </div><!-- collapse -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow userNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link">
+                        <i class="fas fa-bell notificationBell"></i>
+                        <span class="notificationCounter">0</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <p class="greetingUser"><?php echo 'Welcome, ';echo $_SESSION['login_user'] ?></p>
+                </li>
+            </ul>
         </nav><!-- navbar -->
 
 
@@ -98,14 +96,15 @@
             </div><!-- row -->
 
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-lg-4">
                     <div class="card h-100 py-2">
                         <div class="card-body">
-                            <p>Number of registers: <?php echo $iRegQuant?></p>
-                            <p>Last register:</p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;Name: <?php echo '          '.$oLastReg['name']?></p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;Identification: <?php echo $oLastReg['geneId']?></p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;Date: <?php echo '          '.$oLastReg['date']?></p>
+                            <p><strong>Number of registers:</strong> <?php echo $iRegQuant?></p>
+                            <p><strong>Last register:</strong></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Name: </strong><?php echo '          '.$oLastReg['name']?></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Identification: </strong><?php echo $oLastReg['geneId']?></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Date: </strong><?php echo '          '.$oLastReg['date']?></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description: </strong><?php echo '   '.$oLastReg['definition']?></p>
                         </div>
                     </div>
                 </div>

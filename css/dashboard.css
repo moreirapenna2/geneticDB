@@ -1,6 +1,6 @@
 body{
     padding-top:90px;
-    background-color: #52585e
+    background-color: #dedede
 }
 @media (min-width:768px){
     body{padding-top:0
@@ -82,21 +82,25 @@ body{
 }
 
 .title{
-    color: #5a5c69 !important;
+    padding-left: 15px;
+    padding-top: 10px;
+    color: #161618 !important;
 }
 
 .greetingUser{
     display: block;
     padding: 0.5rem 1rem;
     margin-bottom: 0;
+    color: #161618;
 }
 
 .userNav{
     padding-bottom: 0;
-    /*width: 100%;*/
+    width: 100%;
+    background-color: #c9c9c9 !important;
 }
 .notificationBell{
-    margin-top: .25rem;
+    /*margin-top: .25rem;*/
 }
 
 .notificationCounter{
@@ -115,4 +119,11 @@ body{
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     color: #fff;
     background-color: #343a40;
+}
+.shadow {
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.30)!important;
+}
+
+.card{
+    border-radius: 10px;
 }
